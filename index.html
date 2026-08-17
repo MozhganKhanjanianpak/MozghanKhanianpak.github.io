@@ -738,7 +738,7 @@
      ABOUT ME
 ========================================================= -->
 
-<section class="about">
+<section class="about" id="about">
 
     <div class="container">
 
@@ -748,157 +748,47 @@
 
         <div class="section-line"></div>
 
-        <p class="about-intro">
+        <div class="about-content">
 
-            I am a theoretical and computational researcher working on
-            the dynamics of complex systems, with a focus on neural
-            systems. I combine analytical approaches with large-scale
-            simulations to uncover principles of emergence, information
-            processing, and collective behavior.
+            <div class="profile-image">
 
-        </p>
-
-
-        <div class="research-grid">
-
-
-            <!-- Neural Dynamics -->
-
-            <div class="research-item">
-
-                <div class="research-icon">
-
-                    <svg viewBox="0 0 48 48">
-
-                        <circle cx="24" cy="24" r="5"></circle>
-
-                        <circle cx="9" cy="13" r="3"></circle>
-                        <circle cx="39" cy="12" r="3"></circle>
-                        <circle cx="9" cy="36" r="3"></circle>
-                        <circle cx="39" cy="36" r="3"></circle>
-
-                        <line x1="20" y1="20" x2="11" y2="15"></line>
-                        <line x1="28" y1="20" x2="37" y2="14"></line>
-                        <line x1="20" y1="28" x2="11" y2="34"></line>
-                        <line x1="28" y1="28" x2="37" y2="34"></line>
-
-                    </svg>
-
-                </div>
-
-                <h3>
-                    Neural Dynamics
-                </h3>
-
-                <p>
-                    Understanding how neural networks generate
-                    collective activity, oscillations, and temporal
-                    patterns.
-                </p>
+                <img
+                    src="profile.png"
+                    alt="Mozhgan Khanjanianpak"
+                    class="profile-photo"
+                >
 
             </div>
 
 
-            <!-- Complex Systems -->
-
-            <div class="research-item">
-
-                <div class="research-icon">
-
-                    <svg viewBox="0 0 48 48">
-
-                        <circle cx="24" cy="12" r="4"></circle>
-                        <circle cx="10" cy="34" r="4"></circle>
-                        <circle cx="38" cy="34" r="4"></circle>
-
-                        <line x1="21" y1="15" x2="13" y2="30"></line>
-                        <line x1="27" y1="15" x2="35" y2="30"></line>
-
-                    </svg>
-
-                </div>
+            <div class="about-text">
 
                 <h3>
-                    Complex Systems
+                    From Physics to Computational Neuroscience
                 </h3>
 
                 <p>
-                    Studying how collective phenomena emerge from
-                    interactions among many simple components.
+                    I am a physicist working at the intersection of
+                    complex systems and computational neuroscience.
+                    My scientific journey began in physics, where I
+                    became interested in how collective behavior emerges
+                    from the interactions of many individual components.
                 </p>
 
-            </div>
-
-
-            <!-- Theoretical Modeling -->
-
-            <div class="research-item">
-
-                <div class="research-icon">
-
-                    <svg viewBox="0 0 48 48">
-
-                        <polyline points="
-                            4,27
-                            11,27
-                            16,11
-                            22,38
-                            27,20
-                            32,27
-                            44,27
-                        "></polyline>
-
-                    </svg>
-
-                </div>
-
-                <h3>
-                    Theoretical Modeling
-                </h3>
-
                 <p>
-                    Building minimal yet biologically grounded models
-                    to reveal mechanisms underlying complex behavior.
+                    This perspective naturally led me toward complex
+                    networks and, eventually, neural systems. Today,
+                    I develop theoretical and computational models to
+                    investigate neural dynamics, network organization,
+                    memory, oscillations, and collective behavior.
                 </p>
 
-            </div>
-
-
-            <!-- Computational Methods -->
-
-            <div class="research-item">
-
-                <div class="research-icon">
-
-                    <svg viewBox="0 0 48 48">
-
-                        <rect x="7" y="9" width="34" height="25" rx="2"></rect>
-
-                        <line x1="4" y1="39" x2="44" y2="39"></line>
-
-                        <polyline points="
-                            18,18
-                            14,22
-                            18,26
-                        "></polyline>
-
-                        <polyline points="
-                            30,18
-                            34,22
-                            30,26
-                        "></polyline>
-
-                    </svg>
-
-                </div>
-
-                <h3>
-                    Computational Methods
-                </h3>
-
                 <p>
-                    Developing efficient simulations and computational
-                    tools for large-scale complex systems.
+                    I am particularly interested in building minimal
+                    models that are simple enough to understand
+                    mathematically, yet rich enough to reproduce
+                    meaningful collective phenomena observed in
+                    biological systems.
                 </p>
 
             </div>
@@ -909,6 +799,50 @@
 
 </section>
 
+/* =========================================================
+   ABOUT ME - PROFILE
+========================================================= */
+
+.about-content {
+    display: grid;
+    grid-template-columns: 330px 1fr;
+    gap: 75px;
+    align-items: center;
+    max-width: 1050px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.profile-photo {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+.about-text h3 {
+    margin: 0 0 18px;
+
+    font-size: 26px;
+    font-weight: 600;
+    color: #172018;
+}
+
+.about-text p {
+    margin: 0 0 18px;
+
+    font-size: 16px;
+    line-height: 1.85;
+    color: #596159;
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
+}
 
 
 <!-- =========================================================
