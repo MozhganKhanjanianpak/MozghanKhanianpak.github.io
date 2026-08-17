@@ -1,1 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Mozhgan Khanjanianpak | Complex Systems Physicist & Computational Neuroscientist</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #222;
+            background: #ffffff;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1050px;
+            margin: auto;
+            padding: 0 30px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 0;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        nav .name {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #444;
+            margin-left: 25px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #0066cc;
+        }
+
+        .hero {
+            padding: 100px 0 90px;
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            line-height: 1.15;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .hero h2 {
+            font-size: 25px;
+            font-weight: 400;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #444;
+            max-width: 800px;
+        }
+
+        .buttons {
+            margin-top: 35px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 11px 20px;
+            margin-right: 10px;
+            border: 1px solid #222;
+            text-decoration: none;
+            color: #222;
+            border-radius: 4px;
+            font-size: 15px;
+        }
+
+        .button:hover {
+            background: #222;
+            color: white;
+        }
+
+        section {
+            padding: 75px 0;
+            border-top: 1px solid #eeeeee;
+        }
+
+        section h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 35px;
+        }
+
+        .research-card {
+            padding: 25px;
+            border: 1px solid #e5e5e5;
+            border-radius: 6px;
+        }
+
+        .research-card h3 {
+            margin-top: 0;
+            font-size: 20px;
+        }
+
+        .research-card p {
+            color: #555;
+        }
+
+        .featured {
+            background: #f7f7f7;
+            padding: 35px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        .featured h3 {
+            font-size: 25px;
+            margin-top: 0;
+        }
+
+        .publication {
+            padding: 20px 0;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .publication:last-child {
+            border-bottom: none;
+        }
+
+        .year {
+            color: #777;
+            font-size: 14px;
+        }
+
+        footer {
+            padding: 45px 0;
+            border-top: 1px solid #eeeeee;
+            color: #777;
+            font-size: 14px;
+        }
+
+        @media (max-width: 750px) {
+
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            nav a {
+                margin-left: 0;
+                margin-right: 15px;
+            }
+
+            .hero {
+                padding: 70px 0;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero h2 {
+                font-size: 21px;
+            }
+
+            .research-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+<div class="container">
+
+    <!-- Navigation -->
+    <nav>
+        <div class="name">
+            Mozhgan Khanjanianpak
+        </div>
+
+        <div>
+            <a href="#research">Research</a>
+            <a href="#publications">Publications</a>
+            <a href="#notes">Notes</a>
+            <a href="#cv">CV</a>
+        </div>
+    </nav>
+
+
+    <!-- Hero -->
+    <header class="hero">
+
+        <h1>
+            Mozhgan Khanjanianpak, PhD
+        </h1>
+
+        <h2>
+            Complex Systems Physicist & Computational Neuroscientist
+        </h2>
+
+        <p>
+            I am a complex systems physicist working at the intersection
+            of complex networks, dynamical systems, and theoretical
+            neuroscience.
+        </p>
+
+        <p>
+            My research explores how interactions among neural elements
+            and network structure give rise to collective dynamics,
+            oscillations, memory, and information processing in biological
+            neural systems.
+        </p>
+
+        <p>
+            My research journey began with complex networks and epidemic
+            spreading and has gradually moved toward understanding the
+            dynamics and computational principles of biological neural
+            networks.
+        </p>
+
+        <div class="buttons">
+            <a class="button" href="#research">Research</a>
+            <a class="button" href="#publications">Publications</a>
+            <a class="button" href="#notes">Research Notes</a>
+        </div>
+
+    </header>
+
+
+    <!-- Research Journey -->
+    <section>
+
+        <h2>
+            From Complex Systems to Neural Dynamics
+        </h2>
+
+        <p>
+            My research has evolved from studying collective phenomena
+            in complex networks to investigating how similar principles
+            of interaction, dynamics, and emergence operate in biological
+            neural systems.
+        </p>
+
+        <p>
+            <strong>Complex Systems Physics</strong>
+            → <strong>Complex Networks</strong>
+            → <strong>Epidemic Dynamics</strong>
+            → <strong>Neural Networks</strong>
+            → <strong>Memory & Oscillations</strong>
+        </p>
+
+    </section>
+
+
+    <!-- Research -->
+    <section id="research">
+
+        <h2>
+            Research
+        </h2>
+
+        <div class="research-grid">
+
+            <div class="research-card">
+                <h3>Neural Dynamics</h3>
+                <p>
+                    Understanding collective dynamics and emergent
+                    activity in biological neural networks.
+                </p>
+            </div>
+
+            <div class="research-card">
+                <h3>Network Structure</h3>
+                <p>
+                    Investigating how connectivity, modularity, and
+                    excitation–inhibition organization shape neural
+                    dynamics and computation.
+                </p>
+            </div>
+
+            <div class="research-card">
+                <h3>Memory & Oscillations</h3>
+                <p>
+                    Exploring how transient interactions and network
+                    dynamics give rise to memory, temporal organization,
+                    and oscillatory activity.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Featured Research -->
+    <section>
+
+        <h2>
+            Featured Research
+        </h2>
+
+        <div class="featured">
+
+            <h3>
+                Transient Synaptic Memory
+            </h3>
+
+            <p>
+                A minimal model of biological neural networks in which
+                synaptic interactions have a finite lifetime, allowing
+                the network to retain a transient memory of its recent
+                activity.
+            </p>
+
+            <div class="buttons">
+                <a class="button" href="#">
+                    Learn about the model
+                </a>
+
+                <a class="button" href="#">
+                    Paper
+                </a>
+
+                <a class="button" href="#">
+                    Code
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Research Notes -->
+    <section id="notes">
+
+        <h2>
+            Research Notes
+        </h2>
+
+        <p>
+            Things I learned while doing research — explained simply.
+        </p>
+
+        <div class="publication">
+
+            <h3>
+                What is synaptic memory?
+            </h3>
+
+            <p>
+                A simple intuition for how a neural network can retain
+                information about its recent activity.
+            </p>
+
+        </div>
+
+        <div class="publication">
+
+            <h3>
+                Why do neural networks oscillate?
+            </h3>
+
+            <p>
+                An intuitive introduction to emergent oscillations
+                in recurrent neural networks.
+            </p>
+
+        </div>
+
+        <div class="publication">
+
+            <h3>
+                From epidemic spreading to neural dynamics
+            </h3>
+
+            <p>
+                What studying complex networks taught me about
+                biological systems.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Publications -->
+    <section id="publications">
+
+        <h2>
+            Selected Publications
+        </h2>
+
+        <div class="publication">
+
+            <div class="year">2026</div>
+
+            <strong>
+                Memory retrieval and gamma oscillations in modular
+                Hopfield-like networks: The role of correlated inputs
+            </strong>
+
+            <p>
+                Mozhgan Khanjanianpak and Alireza Valizadeh
+            </p>
+
+        </div>
+
+
+        <div class="publication">
+
+            <div class="year">2025</div>
+
+            <strong>
+                An 80/20 cortical balance stabilizes information-rich dynamics
+            </strong>
+
+            <p>
+                Mozhgan Khanjanianpak, Maryam Pakpour,
+                Matjaž Perc, and Alireza Valizadeh
+            </p>
+
+        </div>
+
+
+        <div class="publication">
+
+            <div class="year">2025</div>
+
+            <strong>
+                Optimizing information capacity in modular neural networks
+                through excitatory and inhibitory connectivity
+            </strong>
+
+            <p>
+                Mozhgan Khanjanianpak and Alireza Valizadeh
+            </p>
+
+        </div>
+
+
+        <div class="publication">
+
+            <div class="year">2024</div>
+
+            <strong>
+                Emergence of complex oscillatory dynamics in the neuronal
+                networks with long activity time of inhibitory synapses
+            </strong>
+
+            <p>
+                Mozhgan Khanjanianpak, Nahid Azimi-Tafreshi,
+                and Alireza Valizadeh
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CV -->
+    <section id="cv">
+
+        <h2>
+            Curriculum Vitae
+        </h2>
+
+        <p>
+            Academic background, research experience, publications,
+            and selected achievements.
+        </p>
+
+        <a class="button" href="#">
+            View CV
+        </a>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <strong>
+            Mozhgan Khanjanianpak, PhD
+        </strong>
+
+        <p>
+            Complex Systems Physicist & Computational Neuroscientist
+        </p>
+
+        <p>
+            GitHub · Google Scholar · ORCID · Email
+        </p>
+
+        <p>
+            © 2026 Mozhgan Khanjanianpak
+        </p>
+
+    </footer>
+
+</div>
+
+</body>
+</html>
