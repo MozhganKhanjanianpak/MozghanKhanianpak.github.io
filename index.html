@@ -4,440 +4,1014 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Mozhgan Khanjanianpak | Complex Systems Physicist & Computational Neuroscientist</title>
+    <title>Mozhgan Khanjanianpak | Complex Systems Physicist</title>
 
     <style>
+
+        /* =========================================================
+           GENERAL
+        ========================================================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            color: #222;
+            color: #172018;
             background: #ffffff;
             line-height: 1.7;
         }
 
-        .container {
-            max-width: 1050px;
-            margin: auto;
-            padding: 0 30px;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 25px 0;
-            border-bottom: 1px solid #e5e5e5;
-        }
-
-        nav .name {
-            font-weight: bold;
-            font-size: 20px;
-        }
-
-        nav a {
+        a {
+            color: inherit;
             text-decoration: none;
-            color: #444;
-            margin-left: 25px;
-            font-size: 15px;
         }
 
-        nav a:hover {
-            color: #0066cc;
+        .container {
+            width: min(1180px, 92%);
+            margin: 0 auto;
         }
+
+
+        /* =========================================================
+           HERO
+        ========================================================= */
 
         .hero {
             position: relative;
-            min-height: 520px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 80px 50% 80px 0;
-            max-width: none;
+            min-height: 100vh;
+            color: white;
 
             background-image:
                 linear-gradient(
-                    to right,
-                    rgba(255, 255, 255, 1) 0%,
-                    rgba(255, 255, 255, 0.97) 42%,
-                    rgba(255, 255, 255, 0.45) 62%,
-                    rgba(255, 255, 255, 0) 100%
+                    90deg,
+                    rgba(0, 20, 8, 0.94) 0%,
+                    rgba(0, 20, 8, 0.86) 35%,
+                    rgba(0, 20, 8, 0.45) 58%,
+                    rgba(0, 20, 8, 0.08) 100%
                 ),
-                url('hero-background.png');
+                url("hero-background.png");
 
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        /* =========================================================
+           NAVIGATION
+        ========================================================= */
+
+        nav {
+            width: min(1180px, 92%);
+            margin: 0 auto;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 28px 0;
+
+            position: relative;
+            z-index: 10;
+        }
+
+        .site-name {
+            font-size: 21px;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 34px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.92);
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #8fd14f;
+        }
+
+        .nav-links .active {
+            color: #8fd14f;
+            border-bottom: 2px solid #8fd14f;
+            padding-bottom: 7px;
+        }
+
+
+        /* =========================================================
+           HERO CONTENT
+        ========================================================= */
+
+        .hero-content {
+            width: min(1180px, 92%);
+            margin: auto;
+
+            display: flex;
+            align-items: center;
+
+            flex: 1;
+            padding: 60px 0 100px;
+        }
+
+        .hero-text {
+            width: 52%;
+            max-width: 610px;
         }
 
         .hero h1 {
-            font-size: 52px;
-            line-height: 1.15;
-            margin-bottom: 15px;
-            font-weight: 600;
+            margin: 0 0 18px;
+
+            font-size: clamp(48px, 6vw, 76px);
+            line-height: 1.05;
+            font-weight: 650;
+
+            letter-spacing: -2px;
         }
 
-        .hero h2 {
-            font-size: 25px;
+        .hero-title {
+            font-size: clamp(23px, 2.4vw, 31px);
+            line-height: 1.35;
+            color: #a6df68;
+
+            margin-bottom: 28px;
             font-weight: 400;
-            color: #555;
-            margin-bottom: 30px;
         }
 
-        .hero p {
-            font-size: 18px;
-            color: #444;
-            max-width: 800px;
+        .hero-line {
+            width: 48px;
+            height: 3px;
+
+            background: #91d24f;
+
+            margin: 0 0 30px;
         }
 
-        .buttons {
-            margin-top: 35px;
+        .hero-description {
+            font-size: 17px;
+            line-height: 1.85;
+
+            color: rgba(255, 255, 255, 0.88);
+
+            max-width: 570px;
+            margin: 0;
+        }
+
+
+        /* =========================================================
+           HERO BUTTONS
+        ========================================================= */
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+
+            margin-top: 38px;
+            flex-wrap: wrap;
         }
 
         .button {
-            display: inline-block;
-            padding: 11px 20px;
-            margin-right: 10px;
-            border: 1px solid #222;
-            text-decoration: none;
-            color: #222;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 12px 22px;
+
             border-radius: 4px;
+
             font-size: 15px;
+            font-weight: 500;
+
+            transition:
+                background 0.2s ease,
+                color 0.2s ease,
+                border-color 0.2s ease,
+                transform 0.2s ease;
         }
 
         .button:hover {
-            background: #222;
+            transform: translateY(-2px);
+        }
+
+        .button-primary {
+            background: #69bd3c;
             color: white;
+            border: 1px solid #69bd3c;
         }
 
-        section {
-            padding: 75px 0;
-            border-top: 1px solid #eeeeee;
+        .button-primary:hover {
+            background: #7dca50;
+            border-color: #7dca50;
         }
 
-        section h2 {
-            font-size: 30px;
-            margin-bottom: 20px;
+        .button-outline {
+            background: transparent;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.75);
         }
+
+        .button-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: white;
+        }
+
+
+        /* =========================================================
+           ABOUT SECTION
+        ========================================================= */
+
+        .about {
+            background: #ffffff;
+            padding: 95px 0 105px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 36px;
+            line-height: 1.2;
+
+            margin: 0;
+            font-weight: 600;
+
+            color: #172018;
+        }
+
+        .section-line {
+            width: 55px;
+            height: 3px;
+
+            background: #68b83b;
+
+            margin: 17px auto 30px;
+        }
+
+        .about-intro {
+            max-width: 850px;
+            margin: 0 auto 65px;
+
+            font-size: 18px;
+            line-height: 1.8;
+
+            color: #4c554d;
+        }
+
+
+        /* =========================================================
+           RESEARCH AREAS
+        ========================================================= */
 
         .research-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-            margin-top: 35px;
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 45px;
+        }
+
+        .research-item {
+            text-align: center;
+        }
+
+        .research-icon {
+            width: 55px;
+            height: 55px;
+
+            margin: 0 auto 20px;
+
+            color: #62b83b;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .research-icon svg {
+            width: 48px;
+            height: 48px;
+
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 1.7;
+
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .research-item h3 {
+            margin: 0 0 12px;
+
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .research-item p {
+            margin: 0;
+
+            font-size: 15px;
+            line-height: 1.7;
+
+            color: #596159;
+        }
+
+
+        /* =========================================================
+           RESEARCH SECTION
+        ========================================================= */
+
+        .research {
+            padding: 100px 0;
+            background: #f6f8f5;
+        }
+
+        .section-heading {
+            max-width: 750px;
+            margin-bottom: 50px;
+        }
+
+        .section-heading h2 {
+            margin: 0 0 15px;
+
+            font-size: 34px;
+            line-height: 1.25;
+        }
+
+        .section-heading p {
+            margin: 0;
+
+            color: #596159;
+            font-size: 17px;
         }
 
         .research-card {
-            padding: 25px;
-            border: 1px solid #e5e5e5;
-            border-radius: 6px;
+            background: white;
+
+            padding: 32px;
+
+            border-left: 4px solid #68b83b;
+
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+
+            margin-bottom: 25px;
         }
 
         .research-card h3 {
-            margin-top: 0;
-            font-size: 20px;
+            margin: 0 0 12px;
+
+            font-size: 22px;
         }
 
         .research-card p {
-            color: #555;
+            margin: 0;
+
+            color: #596159;
         }
 
-        .featured {
-            background: #f7f7f7;
-            padding: 35px;
-            border-radius: 8px;
-            margin-top: 30px;
-        }
 
-        .featured h3 {
-            font-size: 25px;
-            margin-top: 0;
+        /* =========================================================
+           PUBLICATIONS
+        ========================================================= */
+
+        .publications {
+            padding: 100px 0;
+            background: white;
         }
 
         .publication {
-            padding: 20px 0;
-            border-bottom: 1px solid #eeeeee;
+            padding: 25px 0;
+
+            border-bottom: 1px solid #e2e6e1;
         }
 
-        .publication:last-child {
-            border-bottom: none;
+        .publication:first-child {
+            border-top: 1px solid #e2e6e1;
         }
 
-        .year {
-            color: #777;
+        .publication-year {
             font-size: 14px;
+            color: #6b756c;
+
+            margin-bottom: 7px;
         }
+
+        .publication h3 {
+            margin: 0 0 8px;
+
+            font-size: 19px;
+            line-height: 1.5;
+        }
+
+        .publication p {
+            margin: 0;
+
+            color: #596159;
+            font-size: 15px;
+        }
+
+
+        /* =========================================================
+           RESEARCH NOTES
+        ========================================================= */
+
+        .notes {
+            padding: 100px 0;
+            background: #f6f8f5;
+        }
+
+        .notes-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .note-card {
+            background: white;
+            padding: 28px;
+
+            border: 1px solid #e1e6df;
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        .note-card:hover {
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 12px 30px rgba(0, 0, 0, 0.07);
+        }
+
+        .note-card h3 {
+            margin: 0 0 12px;
+
+            font-size: 19px;
+        }
+
+        .note-card p {
+            margin: 0;
+
+            color: #596159;
+            font-size: 15px;
+        }
+
+
+        /* =========================================================
+           CV
+        ========================================================= */
+
+        .cv {
+            padding: 100px 0;
+            text-align: center;
+            background: white;
+        }
+
+        .cv p {
+            max-width: 650px;
+            margin: 20px auto 30px;
+
+            color: #596159;
+        }
+
+        .cv-button {
+            display: inline-block;
+
+            padding: 12px 26px;
+
+            background: #68b83b;
+            color: white;
+
+            border-radius: 4px;
+        }
+
+        .cv-button:hover {
+            background: #579d31;
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
 
         footer {
-            padding: 45px 0;
-            border-top: 1px solid #eeeeee;
-            color: #777;
+            background: #0d160f;
+            color: rgba(255, 255, 255, 0.7);
+
+            padding: 50px 0;
+
+            text-align: center;
+        }
+
+        footer strong {
+            color: white;
+            font-size: 17px;
+        }
+
+        footer p {
+            margin: 8px 0;
             font-size: 14px;
         }
 
-        @media (max-width: 750px) {
+        .footer-links {
+            margin-top: 20px;
+        }
+
+        .footer-links a {
+            margin: 0 10px;
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        .footer-links a:hover {
+            color: #8fd14f;
+        }
+
+
+        /* =========================================================
+           MOBILE
+        ========================================================= */
+
+        @media (max-width: 900px) {
+
+            .nav-links {
+                gap: 18px;
+            }
+
+            .hero-text {
+                width: 65%;
+            }
+
+            .research-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 45px 30px;
+            }
+
+            .notes-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        @media (max-width: 700px) {
+
+            .hero {
+                min-height: auto;
+
+                background-image:
+                    linear-gradient(
+                        rgba(0, 18, 7, 0.82),
+                        rgba(0, 18, 7, 0.88)
+                    ),
+                    url("hero-background.png");
+
+                background-position: center;
+            }
 
             nav {
                 flex-direction: column;
                 align-items: flex-start;
-                gap: 15px;
+
+                gap: 18px;
             }
 
-            nav a {
-                margin-left: 0;
-                margin-right: 15px;
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 15px 20px;
             }
 
-            .hero {
-                padding: 70px 0;
+            .hero-content {
+                padding: 75px 0 90px;
+            }
+
+            .hero-text {
+                width: 100%;
+                max-width: 600px;
             }
 
             .hero h1 {
-                font-size: 38px;
+                font-size: 48px;
+                letter-spacing: -1px;
             }
 
-            .hero h2 {
-                font-size: 21px;
+            .hero-title {
+                font-size: 24px;
+            }
+
+            .hero-description {
+                font-size: 16px;
             }
 
             .research-grid {
                 grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .about,
+            .research,
+            .publications,
+            .notes,
+            .cv {
+                padding: 75px 0;
+            }
+
+            .section-title {
+                font-size: 31px;
             }
         }
+
     </style>
 </head>
 
 
 <body>
 
-<div class="container">
 
-    <!-- Navigation -->
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<header class="hero">
+
     <nav>
-        <div class="name">
+
+        <div class="site-name">
             Mozhgan Khanjanianpak
         </div>
 
-        <div>
-            <a href="#research">Research</a>
-            <a href="#publications">Publications</a>
-            <a href="#notes">Notes</a>
-            <a href="#cv">CV</a>
+        <div class="nav-links">
+
+            <a href="#home" class="active">
+                Home
+            </a>
+
+            <a href="#research">
+                Research
+            </a>
+
+            <a href="#publications">
+                Publications
+            </a>
+
+            <a href="#notes">
+                Research Notes
+            </a>
+
+            <a href="#cv">
+                CV
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
         </div>
+
     </nav>
 
 
-    <!-- Hero -->
-    <header class="hero">
+    <div class="hero-content" id="home">
 
-        <h1>
-            Mozhgan Khanjanianpak, PhD
-        </h1>
+        <div class="hero-text">
 
-        <h2>
-            Complex Systems Physicist & Computational Neuroscientist
-        </h2>
+            <h1>
+                Mozhgan<br>
+                Khanjanianpak
+            </h1>
 
-        <p>
-            I am a complex systems physicist working at the intersection
-            of complex networks, dynamical systems, and theoretical
-            neuroscience.
-        </p>
+            <div class="hero-title">
+                Complex Systems Physicist &<br>
+                Computational Neuroscientist
+            </div>
 
-        <p>
-            My research explores how interactions among neural elements
-            and network structure give rise to collective dynamics,
-            oscillations, memory, and information processing in biological
-            neural systems.
-        </p>
+            <div class="hero-line"></div>
 
-        <p>
-            My research journey began with complex networks and epidemic
-            spreading and has gradually moved toward understanding the
-            dynamics and computational principles of biological neural
-            networks.
-        </p>
+            <p class="hero-description">
+                I develop and analyze theoretical models to understand
+                how complex interactions give rise to collective dynamics
+                in neural systems and beyond. My research lies at the
+                intersection of physics, complex systems, and neuroscience.
+            </p>
 
-        <div class="buttons">
-            <a class="button" href="#research">Research</a>
-            <a class="button" href="#publications">Publications</a>
-            <a class="button" href="#notes">Research Notes</a>
+            <div class="hero-buttons">
+
+                <a href="#research"
+                   class="button button-primary">
+                    Research
+                </a>
+
+                <a href="#publications"
+                   class="button button-outline">
+                    Publications
+                </a>
+
+                <a href="#notes"
+                   class="button button-outline">
+                    Research Notes
+                </a>
+
+            </div>
+
         </div>
 
-    </header>
+    </div>
+
+</header>
 
 
-    <!-- Research Journey -->
-    <section>
 
-        <h2>
-            From Complex Systems to Neural Dynamics
+<!-- =========================================================
+     ABOUT ME
+========================================================= -->
+
+<section class="about">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            About Me
         </h2>
 
-        <p>
-            My research has evolved from studying collective phenomena
-            in complex networks to investigating how similar principles
-            of interaction, dynamics, and emergence operate in biological
-            neural systems.
+        <div class="section-line"></div>
+
+        <p class="about-intro">
+
+            I am a theoretical and computational researcher working on
+            the dynamics of complex systems, with a focus on neural
+            systems. I combine analytical approaches with large-scale
+            simulations to uncover principles of emergence, information
+            processing, and collective behavior.
+
         </p>
 
-        <p>
-            <strong>Complex Systems Physics</strong>
-            → <strong>Complex Networks</strong>
-            → <strong>Epidemic Dynamics</strong>
-            → <strong>Neural Networks</strong>
-            → <strong>Memory & Oscillations</strong>
-        </p>
-
-    </section>
-
-
-    <!-- Research -->
-    <section id="research">
-
-        <h2>
-            Research
-        </h2>
 
         <div class="research-grid">
 
-            <div class="research-card">
-                <h3>Neural Dynamics</h3>
+
+            <!-- Neural Dynamics -->
+
+            <div class="research-item">
+
+                <div class="research-icon">
+
+                    <svg viewBox="0 0 48 48">
+
+                        <circle cx="24" cy="24" r="5"></circle>
+
+                        <circle cx="9" cy="13" r="3"></circle>
+                        <circle cx="39" cy="12" r="3"></circle>
+                        <circle cx="9" cy="36" r="3"></circle>
+                        <circle cx="39" cy="36" r="3"></circle>
+
+                        <line x1="20" y1="20" x2="11" y2="15"></line>
+                        <line x1="28" y1="20" x2="37" y2="14"></line>
+                        <line x1="20" y1="28" x2="11" y2="34"></line>
+                        <line x1="28" y1="28" x2="37" y2="34"></line>
+
+                    </svg>
+
+                </div>
+
+                <h3>
+                    Neural Dynamics
+                </h3>
+
                 <p>
-                    Understanding collective dynamics and emergent
-                    activity in biological neural networks.
+                    Understanding how neural networks generate
+                    collective activity, oscillations, and temporal
+                    patterns.
                 </p>
+
             </div>
 
-            <div class="research-card">
-                <h3>Network Structure</h3>
+
+            <!-- Complex Systems -->
+
+            <div class="research-item">
+
+                <div class="research-icon">
+
+                    <svg viewBox="0 0 48 48">
+
+                        <circle cx="24" cy="12" r="4"></circle>
+                        <circle cx="10" cy="34" r="4"></circle>
+                        <circle cx="38" cy="34" r="4"></circle>
+
+                        <line x1="21" y1="15" x2="13" y2="30"></line>
+                        <line x1="27" y1="15" x2="35" y2="30"></line>
+
+                    </svg>
+
+                </div>
+
+                <h3>
+                    Complex Systems
+                </h3>
+
                 <p>
-                    Investigating how connectivity, modularity, and
-                    excitation–inhibition organization shape neural
-                    dynamics and computation.
+                    Studying how collective phenomena emerge from
+                    interactions among many simple components.
                 </p>
+
             </div>
 
-            <div class="research-card">
-                <h3>Memory & Oscillations</h3>
+
+            <!-- Theoretical Modeling -->
+
+            <div class="research-item">
+
+                <div class="research-icon">
+
+                    <svg viewBox="0 0 48 48">
+
+                        <polyline points="
+                            4,27
+                            11,27
+                            16,11
+                            22,38
+                            27,20
+                            32,27
+                            44,27
+                        "></polyline>
+
+                    </svg>
+
+                </div>
+
+                <h3>
+                    Theoretical Modeling
+                </h3>
+
                 <p>
-                    Exploring how transient interactions and network
-                    dynamics give rise to memory, temporal organization,
-                    and oscillatory activity.
+                    Building minimal yet biologically grounded models
+                    to reveal mechanisms underlying complex behavior.
                 </p>
+
+            </div>
+
+
+            <!-- Computational Methods -->
+
+            <div class="research-item">
+
+                <div class="research-icon">
+
+                    <svg viewBox="0 0 48 48">
+
+                        <rect x="7" y="9" width="34" height="25" rx="2"></rect>
+
+                        <line x1="4" y1="39" x2="44" y2="39"></line>
+
+                        <polyline points="
+                            18,18
+                            14,22
+                            18,26
+                        "></polyline>
+
+                        <polyline points="
+                            30,18
+                            34,22
+                            30,26
+                        "></polyline>
+
+                    </svg>
+
+                </div>
+
+                <h3>
+                    Computational Methods
+                </h3>
+
+                <p>
+                    Developing efficient simulations and computational
+                    tools for large-scale complex systems.
+                </p>
+
             </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- Featured Research -->
-    <section>
 
-        <h2>
-            Featured Research
-        </h2>
+<!-- =========================================================
+     RESEARCH
+========================================================= -->
 
-        <div class="featured">
+<section class="research" id="research">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>
+                Research
+            </h2>
+
+            <p>
+                My research explores how microscopic interactions,
+                network structure, and dynamical rules give rise to
+                collective phenomena in complex systems.
+            </p>
+
+        </div>
+
+
+        <div class="research-card">
+
+            <h3>
+                Neural Network Dynamics
+            </h3>
+
+            <p>
+                Investigating emergent activity, excitation–inhibition
+                balance, oscillations, memory, and information processing
+                in recurrent neural networks.
+            </p>
+
+        </div>
+
+
+        <div class="research-card">
+
+            <h3>
+                Complex Networks
+            </h3>
+
+            <p>
+                Studying how network topology, modularity, connectivity,
+                and interactions influence collective dynamics.
+            </p>
+
+        </div>
+
+
+        <div class="research-card">
 
             <h3>
                 Transient Synaptic Memory
             </h3>
 
             <p>
-                A minimal model of biological neural networks in which
-                synaptic interactions have a finite lifetime, allowing
-                the network to retain a transient memory of its recent
-                activity.
+                Developing minimal biologically grounded models in which
+                finite synaptic activity creates a transient memory of
+                recent network states.
             </p>
 
-            <div class="buttons">
-                <a class="button" href="#">
-                    Learn about the model
-                </a>
+        </div>
 
-                <a class="button" href="#">
-                    Paper
-                </a>
+    </div>
 
-                <a class="button" href="#">
-                    Code
-                </a>
+</section>
+
+
+
+<!-- =========================================================
+     PUBLICATIONS
+========================================================= -->
+
+<section class="publications" id="publications">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>
+                Publications
+            </h2>
+
+            <p>
+                Selected research contributions and ongoing work.
+            </p>
+
+        </div>
+
+
+        <div class="publication">
+
+            <div class="publication-year">
+                2026
             </div>
 
-        </div>
-
-    </section>
-
-
-    <!-- Research Notes -->
-    <section id="notes">
-
-        <h2>
-            Research Notes
-        </h2>
-
-        <p>
-            Things I learned while doing research — explained simply.
-        </p>
-
-        <div class="publication">
-
             <h3>
-                What is synaptic memory?
-            </h3>
-
-            <p>
-                A simple intuition for how a neural network can retain
-                information about its recent activity.
-            </p>
-
-        </div>
-
-        <div class="publication">
-
-            <h3>
-                Why do neural networks oscillate?
-            </h3>
-
-            <p>
-                An intuitive introduction to emergent oscillations
-                in recurrent neural networks.
-            </p>
-
-        </div>
-
-        <div class="publication">
-
-            <h3>
-                From epidemic spreading to neural dynamics
-            </h3>
-
-            <p>
-                What studying complex networks taught me about
-                biological systems.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- Publications -->
-    <section id="publications">
-
-        <h2>
-            Selected Publications
-        </h2>
-
-        <div class="publication">
-
-            <div class="year">2026</div>
-
-            <strong>
                 Memory retrieval and gamma oscillations in modular
                 Hopfield-like networks: The role of correlated inputs
-            </strong>
+            </h3>
 
             <p>
                 Mozhgan Khanjanianpak and Alireza Valizadeh
@@ -448,11 +1022,14 @@
 
         <div class="publication">
 
-            <div class="year">2025</div>
+            <div class="publication-year">
+                2025
+            </div>
 
-            <strong>
-                An 80/20 cortical balance stabilizes information-rich dynamics
-            </strong>
+            <h3>
+                An 80/20 cortical balance stabilizes information-rich
+                dynamics
+            </h3>
 
             <p>
                 Mozhgan Khanjanianpak, Maryam Pakpour,
@@ -464,12 +1041,14 @@
 
         <div class="publication">
 
-            <div class="year">2025</div>
+            <div class="publication-year">
+                2025
+            </div>
 
-            <strong>
-                Optimizing information capacity in modular neural networks
-                through excitatory and inhibitory connectivity
-            </strong>
+            <h3>
+                Optimizing information capacity in modular neural
+                networks through excitatory and inhibitory connectivity
+            </h3>
 
             <p>
                 Mozhgan Khanjanianpak and Alireza Valizadeh
@@ -480,12 +1059,14 @@
 
         <div class="publication">
 
-            <div class="year">2024</div>
+            <div class="publication-year">
+                2024
+            </div>
 
-            <strong>
-                Emergence of complex oscillatory dynamics in the neuronal
+            <h3>
+                Emergence of complex oscillatory dynamics in neuronal
                 networks with long activity time of inhibitory synapses
-            </strong>
+            </h3>
 
             <p>
                 Mozhgan Khanjanianpak, Nahid Azimi-Tafreshi,
@@ -494,30 +1075,126 @@
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- CV -->
-    <section id="cv">
 
-        <h2>
+<!-- =========================================================
+     RESEARCH NOTES
+========================================================= -->
+
+<section class="notes" id="notes">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>
+                Research Notes
+            </h2>
+
+            <p>
+                Things I have learned along the way — explained simply,
+                from the perspective of doing research.
+            </p>
+
+        </div>
+
+
+        <div class="notes-grid">
+
+
+            <article class="note-card">
+
+                <h3>
+                    What is synaptic memory?
+                </h3>
+
+                <p>
+                    An intuitive introduction to how finite synaptic
+                    interactions can allow a neural network to retain
+                    information about its recent activity.
+                </p>
+
+            </article>
+
+
+            <article class="note-card">
+
+                <h3>
+                    Why do neural networks oscillate?
+                </h3>
+
+                <p>
+                    A simple exploration of how recurrent interactions
+                    can transform local dynamics into collective
+                    oscillations.
+                </p>
+
+            </article>
+
+
+            <article class="note-card">
+
+                <h3>
+                    From epidemic spreading to neural dynamics
+                </h3>
+
+                <p>
+                    Reflections on how ideas from complex networks and
+                    epidemic modeling led toward my work on neural
+                    systems.
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CV
+========================================================= -->
+
+<section class="cv" id="cv">
+
+    <div class="container">
+
+        <h2 class="section-title">
             Curriculum Vitae
         </h2>
 
+        <div class="section-line"></div>
+
         <p>
-            Academic background, research experience, publications,
-            and selected achievements.
+            My academic background, research experience,
+            publications, and research activities.
         </p>
 
-        <a class="button" href="#">
+        <a href="#" class="cv-button">
             View CV
         </a>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- Footer -->
-    <footer>
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer id="contact">
+
+    <div class="container">
 
         <strong>
             Mozhgan Khanjanianpak, PhD
@@ -527,17 +1204,34 @@
             Complex Systems Physicist & Computational Neuroscientist
         </p>
 
-        <p>
-            GitHub · Google Scholar · ORCID · Email
-        </p>
+        <div class="footer-links">
 
-        <p>
+            <a href="#">
+                GitHub
+            </a>
+
+            <a href="#">
+                Google Scholar
+            </a>
+
+            <a href="#">
+                ORCID
+            </a>
+
+            <a href="#">
+                Email
+            </a>
+
+        </div>
+
+        <p style="margin-top: 25px;">
             © 2026 Mozhgan Khanjanianpak
         </p>
 
-    </footer>
+    </div>
 
-</div>
+</footer>
+
 
 </body>
 </html>
