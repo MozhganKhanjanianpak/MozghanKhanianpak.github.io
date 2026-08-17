@@ -272,7 +272,52 @@
             color: #4c554d;
         }
 
+        /* =========================================================
+           ABOUT ME - PROFILE
+        ========================================================= */
 
+        .about-content {
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: 65px;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+    .profile-photo {
+        width: 260px;
+        height: 260px;
+        object-fit: cover;
+
+        border-radius: 8px;
+
+        box-shadow:
+            0 12px 35px rgba(0, 0, 0, 0.12);
+    }
+
+    .about-text h3 {
+        margin: 0 0 18px;
+
+        font-size: 26px;
+        font-weight: 600;
+        color: #172018;
+    }
+
+    .about-text p {
+        margin: 0 0 18px;
+
+        font-size: 16px;
+        line-height: 1.85;
+        color: #596159;
+    }
+
+    .about-text p:last-child {
+        margin-bottom: 0;
+    }
+
+        
         /* =========================================================
            RESEARCH AREAS
         ========================================================= */
@@ -799,69 +844,6 @@
 
 </section>
 
-/* =========================================================
-   ABOUT ME - PROFILE
-========================================================= */
-
-.about-content {
-    display: grid;
-    grid-template-columns: 330px 1fr;
-    gap: 75px;
-    align-items: center;
-    max-width: 1050px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-.profile-photo {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-
-    border-radius: 8px;
-
-    box-shadow:
-        0 12px 35px rgba(0, 0, 0, 0.12);
-}
-
-.about-text h3 {
-    margin: 0 0 18px;
-
-    font-size: 26px;
-    font-weight: 600;
-    color: #172018;
-}
-
-.about-text p {
-    margin: 0 0 18px;
-
-    font-size: 16px;
-    line-height: 1.85;
-    color: #596159;
-}
-
-.about-text p:last-child {
-    margin-bottom: 0;
-}
-
-    @media (max-width: 700px) {
-
-    .about-content {
-        grid-template-columns: 1fr;
-        gap: 35px;
-        text-align: center;
-    }
-
-    .profile-photo {
-        width: 260px;
-        margin: 0 auto;
-        display: block;
-    }
-
-    .about-text {
-        text-align: left;
-    }
-}
 
 <!-- =========================================================
      RESEARCH
